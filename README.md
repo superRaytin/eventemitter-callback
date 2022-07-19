@@ -4,6 +4,7 @@
 [![Downloads][downloads-image]][npm-url]
 [![Package tree-shaking](https://badgen.net/bundlephobia/tree-shaking/eventemitter-callback)](https://bundlephobia.com/package/eventemitter-callback)
 [![Package minified & gzipped size](https://badgen.net/bundlephobia/minzip/eventemitter-callback)](https://bundlephobia.com/package/eventemitter-callback)
+[![Package dependency count](https://badgen.net/bundlephobia/dependency-count/eventemitter-callback)](https://bundlephobia.com/package/eventemitter-callback)
 
 [npm-url]: https://npmjs.org/package/eventemitter-callback
 [downloads-image]: http://img.shields.io/npm/dm/eventemitter-callback.svg
@@ -85,7 +86,7 @@ Adds the `listener` function to the end of the listeners array for the event nam
 - **eventName** `string` the name of the event
 - **listener** `function` the callback function
 
-The `listener` function support `AsyncFunction` or returns a `Promise`
+The `listener` can be asynchronous. Specified as an `AsyncFunction` or return a `Promise`.
 
 ```js
 emitter.on('event-name', (arg) => {
