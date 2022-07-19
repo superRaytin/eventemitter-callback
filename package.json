@@ -1,0 +1,43 @@
+{
+  "name": "eventemitter-callback",
+  "version": "0.1.0",
+  "description": "Emit an event and waiting for a result.",
+  "main": "dist/eventemitter-callback.cjs.js",
+  "module": "dist/eventemitter-callback.esm.js",
+  "browser": "dist/eventemitter-callback.umd.js",
+  "dependencies": {
+    "eventemitter3": "^4.0.7"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "eslint": "^8.20.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "rollup": "^2.77.0"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "node test/test.js",
+    "lint": "eslint --ext .js src",
+    "lint:fix": "eslint --fix --ext .js src",
+    "pretest": "npm run build",
+    "prepublishOnly": "npm run lint && npm run build",
+    "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag $PACKAGE_VERSION && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/superraytin/eventemitter-callback.git"
+  },
+  "keywords": [
+    "event emitter",
+    "eventemitter callback",
+    "eventbus",
+    "eventemitter"
+  ],
+  "files": [
+    "dist"
+  ]
+}
