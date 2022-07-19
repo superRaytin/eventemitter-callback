@@ -42,6 +42,7 @@ Installation from CDN:
 
 ```js
 import emitter from 'eventemitter-callback'
+// import * as emitter from 'eventemitter-callback' // type: 'module'
 
 emitter.on('event-name', (arg) => {
   console.log(arg) // prints "ping"
