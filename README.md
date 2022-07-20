@@ -79,6 +79,16 @@ emitter.on('msg', (arg) => {
 
 ## API
 
+- [on(eventName, listener)](#oneventname-listener)
+- [once(eventName, listener)](#onceeventname-listener)
+- [emit(eventName[, ...args][, callback])](#emiteventname-args-callback)
+- [emitAll(eventName[, ...args])](#emitalleventname-args)
+- [emitValidateAll(eventName[, ...args])](#emitvalidatealleventname-args)
+- [emitValidateAnyOf(eventName[, ...args])](#emitvalidateanyofeventname-args)
+- [off(eventName[, listener])](#offeventname-listener)
+- [disablePreEmitter()](#disablepreemitter)
+- [enablePreEmitter()](#enablepreemitter)
+
 ### on(eventName, listener)
 
 Adds the `listener` function to the end of the listeners array for the event named `eventName`.
