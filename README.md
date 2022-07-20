@@ -156,6 +156,14 @@ Removes all the listeners for the event:
 emitter.off('event-name')
 ```
 
+### disablePreEmitter()
+
+Disable triggering events before listening.
+
+### enablePreEmitter()
+
+Enable triggering events before listening.
+
 ### emitter._eventEmitter
 
 Reference to current instance of EventEmitter3.
